@@ -20,6 +20,7 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Author", name: "author", widget: "relation", collection: "authors", valueField: "name", searchFields: ["name"] }
+      - { label: "Category", name: "categories", widget: "relation", collection: "categories", valueField: "name", searchFields: ["name"], attributes: {multiple:'multiple'} }
       - { label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", dateFormat: "YYYY-MM-DD", timeFormat: false }
       - { label: "Excerpt", name: "excerpt", widget: "string", required: false }
       - { label: "Hero", name: "hero", widget: "image" }
