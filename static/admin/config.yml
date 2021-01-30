@@ -20,7 +20,8 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Author", name: "author", widget: "relation", collection: "authors", valueField: "name", searchFields: ["name"] }
-      - { label: "Category", name: "categories", widget: "relation", collection: "categories", valueField: "name", searchFields: ["name"], attributes: {multiple:'multiple'} }
+      # - { label: "Category", name: "title", widget: "string" }
+      - { label: "Category", name: "categories", widget: "relation", collection: "categories", valueField: "name", searchFields: ["name"] }
       - { label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", dateFormat: "YYYY-MM-DD", timeFormat: false }
       - { label: "Excerpt", name: "excerpt", widget: "string", required: false }
       - { label: "Hero", name: "hero", widget: "image" }
@@ -42,3 +43,16 @@ collections:
       - { label: Featured, name: featured, widget: boolean, default: false }
       - { label: Avatar, name: avatar, widget: image }
       - { label: Social, name: social, widget: list, collapsed: false, field: { label: URL, name: url, widget: string } }
+  - name: "categories"
+    label: "Categories"
+    folder: "content/categories/categories"
+    create: true
+    delete: true
+    format: "yml"
+    identifier_field: "name"
+    editor:
+      preview: false
+    fields:
+      - { label: Name, name: name, widget: string }
+      # - { label: Featured, name: featured, widget: boolean, default: false }
+
